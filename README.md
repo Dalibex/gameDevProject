@@ -1,7 +1,8 @@
 # gameDevProyect
+
 Proyecto de creación de un videojuego.
 
 DETALLES:
 
-Motor - Unity
+Motor - Unity //
 Estilo - Pixel Art 2D
