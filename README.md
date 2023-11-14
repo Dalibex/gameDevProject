@@ -1,2 +1,7 @@
 # gameDevProyect
-Proyecto de creación de un videojuego 2D en Unity, pixel art (detalles a decidir)
+Proyecto de creación de un videojuego.
+
+DETALLES:
+
+Motor - Unity
+Estilo - Pixel Art 2D
