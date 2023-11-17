@@ -6,4 +6,4 @@ DETALLES:
 
 Motor - Unity //
 Estilo - Pixel Art 2D
-BIcho
+Bicho
