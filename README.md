@@ -1,4 +1,4 @@
-# gameDevProyect
+# gameDevProject
 
 Proyecto de creación de un videojuego.
 
