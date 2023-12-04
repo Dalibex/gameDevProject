@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/PantallaTitulo.unity
     guid: 25f74115ee388e84f8287d25d9a00606
   - enabled: 1
-    path: Assets/Main.unity
-    guid: faf4cdcfdadaed4439764269e885f515
+    path: Assets/Beta.unity
+    guid: b461d51cc7bda3546883e81878008f5d
   m_configObjects: {}
