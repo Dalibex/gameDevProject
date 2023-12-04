@@ -73,7 +73,7 @@ public class PlayerMove : MonoBehaviour
             animator.SetBool("Wall",false);
             CheckWall.isWall=false;               
             canDouble=true;
-            //playerMovement=true;
+            playerMovement=true;
         }
         if(CheckGround.isGrounded==false){
             animator.SetBool("Jump",true);
@@ -84,6 +84,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (CheckWall.isWall)
             {
+                if(Input.GetKey("a")&&Input.GetKey("d")){}else{
                 canDouble=false;
                 animator.SetBool("Wall",true);
                 //rb2D.velocity = new Vector2(rb2D.velocity.x, -0.75f);
@@ -93,6 +94,7 @@ public class PlayerMove : MonoBehaviour
                     animator.Play("WallAnimation");
                     if (Input.GetKeyDown("space"))
                     {
+                        animator.SetBool("Double",false);
                         wallCounter=wallStartTime;
                         rb2D.velocity = new Vector2(runSpeed, jumpSpeed);
                         playerMovement=false;                                         
@@ -104,12 +106,14 @@ public class PlayerMove : MonoBehaviour
                     animator.Play("WallAnimation");
                     if (Input.GetKeyDown("space"))
                     {
+                        animator.SetBool("Double",false);
                         wallCounter=wallStartTime;       
                         rb2D.velocity = new Vector2(-runSpeed, jumpSpeed);
                         playerMovement=false;
                     
                     }
                 }
+            }
             
             }
         if (wallCounter>0)
@@ -121,7 +125,7 @@ public class PlayerMove : MonoBehaviour
                                 
             }
         }
-        if (horizCounter>0)
+        /*if (horizCounter>0)
         {
             horizCounter-=Time.deltaTime;
             if (horizCounter<=0)
@@ -130,12 +134,14 @@ public class PlayerMove : MonoBehaviour
                                 
             }
         }
+        */
         if (CheckGround.isGrounded)
         {
             if (Input.GetKey("s"))
             {
                 playerMovement=false; 
                 animator.SetBool("Run",false);
+                rb2D.velocity = new Vector2(rb2D.velocity.x, -10);
                 if (Input.GetKey("a"))
                 {
                     direction=-1;
@@ -147,9 +153,10 @@ public class PlayerMove : MonoBehaviour
                 }
                 if(Input.GetKeyDown("space"))
                 {
-                horizCounter=horizStartTime;
+                    animator.SetBool("Double",false);
+                //horizCounter=horizStartTime;
                 playerMovement=false;
-                rb2D.velocity = new Vector2(3*runSpeed*direction, jumpSpeed/2);
+                rb2D.velocity = new Vector2(2*runSpeed*direction, jumpSpeed/2);
                 }//else rb2D.velocity = new Vector2(0, 0);
 
             }else playerMovement=true;
