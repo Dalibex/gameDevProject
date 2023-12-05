@@ -17,9 +17,10 @@ public class PlayerMove : MonoBehaviour
     private bool playerMovement;
     private float wallCounter,horizCounter;
     public float wallStartTime=0.5f;
-    public float horizStartTime=0.3f;
+    public float horizStartTime=0.5f;
     private int direction;
-    //private bool horizJump;
+    //public PhysicsMaterial2D terrain;
+    private bool horizontalJump,stopMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,8 @@ public class PlayerMove : MonoBehaviour
         wallCounter=wallStartTime;
         horizCounter=horizStartTime;
         direction=1;
-
+        stopMove=false;
+        //terrain.friction=0.0045f;
     }
     void Update()
     {      
@@ -74,6 +76,10 @@ public class PlayerMove : MonoBehaviour
             CheckWall.isWall=false;               
             canDouble=true;
             playerMovement=true;
+            if (stopMove)
+            {
+                Invoke("Stoped",0.1f);
+            }
         }
         if(CheckGround.isGrounded==false){
             animator.SetBool("Jump",true);
@@ -139,9 +145,9 @@ public class PlayerMove : MonoBehaviour
         {
             if (Input.GetKey("s"))
             {
+                rb2D.velocity = new Vector2(0, rb2D.velocity.y);
                 playerMovement=false; 
                 animator.SetBool("Run",false);
-                rb2D.velocity = new Vector2(rb2D.velocity.x, -10);
                 if (Input.GetKey("a"))
                 {
                     direction=-1;
@@ -153,12 +159,10 @@ public class PlayerMove : MonoBehaviour
                 }
                 if(Input.GetKeyDown("space"))
                 {
-                    animator.SetBool("Double",false);
-                //horizCounter=horizStartTime;
-                playerMovement=false;
-                rb2D.velocity = new Vector2(2*runSpeed*direction, jumpSpeed/2);
+                    stopMove=true;
+                    rb2D.velocity = new Vector2(2*runSpeed*direction, jumpSpeed/2);
+                    CheckGround.isGrounded=false;
                 }//else rb2D.velocity = new Vector2(0, 0);
-
             }else playerMovement=true;
         }
             
@@ -171,6 +175,7 @@ public class PlayerMove : MonoBehaviour
         {
             if (Input.GetKey("d"))
             {
+                direction=1;
                 rb2D.velocity = new Vector2(runSpeed,rb2D.velocity.y);
                 spriteRenderer.flipX =false;
                 animator.SetBool("Run",true);
@@ -178,9 +183,10 @@ public class PlayerMove : MonoBehaviour
             }
             else if (Input.GetKey("a"))
             {
+                direction=-1;
                 rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);
                 spriteRenderer.flipX=true;
-                wallCollider.transform.position=(new Vector2(transform.position.x-0.17f,wallCollider.transform.position.y));
+                wallCollider.transform.position=(new Vector2(transform.position.x-0.16f,wallCollider.transform.position.y));
                 animator.SetBool("Run",true);
             }
                 else {
@@ -188,5 +194,10 @@ public class PlayerMove : MonoBehaviour
                 animator.SetBool("Run",false);
                 }
         }
+    }
+    void Stoped(){
+        rb2D.velocity = new Vector2(0, rb2D.velocity.y);
+        playerMovement=true; 
+        stopMove=false;
     }
 }
