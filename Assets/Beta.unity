@@ -4522,6 +4522,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1409333462 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4341537343976948916, guid: 43795322ebeac20429292db7ddf45099, type: 3}
+  m_PrefabInstance: {fileID: 1022544206397284972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1448395518
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,7 +4904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582877014}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5236,7 +5241,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4670599716676065638, guid: 43795322ebeac20429292db7ddf45099, type: 3}
+      propertyPath: boxCollider2D
+      value: 
+      objectReference: {fileID: 1409333462}
+    - target: {fileID: 4670599716676065638, guid: 43795322ebeac20429292db7ddf45099, type: 3}
       propertyPath: wallStartTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670599716676065638, guid: 43795322ebeac20429292db7ddf45099, type: 3}
+      propertyPath: horizStartTime
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5887151506869524824, guid: 43795322ebeac20429292db7ddf45099, type: 3}

@@ -21,6 +21,7 @@ public class PlayerMove : MonoBehaviour
     private int direction;
     //public PhysicsMaterial2D terrain;
     private bool horizontalJump,stopMove;
+    public BoxCollider2D boxCollider2D;
     // Start is called before the first frame update
     void Start()
     {
@@ -211,5 +212,13 @@ public class PlayerMove : MonoBehaviour
         rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         playerMovement=true; 
         stopMove=false;
+    }
+    public void  Bounce(){
+        rb2D.velocity= new Vector2(0,2);
+        boxCollider2D.isTrigger=true;
+        CheckGround.isGrounded=false;
+        CheckWall.isWall=false;
+        spriteRenderer.sortingOrder=3;
+        playerMovement=false;
     }
 }
