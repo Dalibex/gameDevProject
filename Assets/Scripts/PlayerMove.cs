@@ -208,6 +208,5 @@ public class PlayerMove : MonoBehaviour
         CheckWall.isWall=false;
         spriteRenderer.sortingOrder=3;
         playerMovement=false;
-        
     }
 }
