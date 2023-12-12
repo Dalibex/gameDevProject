@@ -7,10 +7,38 @@ using UnityEngine.SceneManagement;
 "SceneManager." */
 public class MainMenu : MonoBehaviour
 {
-    //Cambiar escena de pantalla de menu principal al juego (SOLO FUNCIONA PARA ESTE CASO!!)
+    private Animator transitionAnimator;
+    [SerializeField] private float transitionTime = 1f;
+
+    void Start()
+    {
+        //Recogemos el animator (SUPUESTAMENTE ESTO DA ERROR, DEBERIA ENCONTRAR EL COMPONENTE ANIMATOR DE FADEEFFECT!!!!!!!!!)
+        transitionAnimator = GetComponentInChildren<Animator>();
+    }
+    
+    void Update() //METODO DE PRUEBA MIENTRAS SE ARREGLA LAS CAPAS (NO PERMITE DAR CLICK SI ESTA EN LA IMAGEN DE FADE ENCIMA)
+    {
+        if(Input.anyKeyDown)
+        {
+            PlayGame();
+        }
+    }
+
+    //Cambiar escena de pantalla de menu principal al juego
     public void PlayGame() {
+        /*Llamamos a este método pulsando el botón, cogemos el siguiente index 
+        y llamamos a la corutina para iniciar la transición*/
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(nextSceneIndex); 
+        StartCoroutine (SceneLoad(nextSceneIndex));
+    }
+
+    public IEnumerator SceneLoad(int sceneIndex) 
+    {
+        //Disparar trigger para reproducir la animación de FadeIn
+        transitionAnimator.SetTrigger("StartTransition");
+        //Esperamos un segundo y cargamos la escena con el valor pasado por parámetro
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(sceneIndex); 
     }
 
     //Cerrar el juego
