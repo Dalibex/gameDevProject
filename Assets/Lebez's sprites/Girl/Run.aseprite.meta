@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 14d5bc92434378045a5635352e45bd00
+guid: a679ff5fd51b68446b23578ea1e9459b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,38 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Girl_Frame_0
+  - name: Run_Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
+      x: 46
       y: 4
       width: 12
       height: 32
-    spriteID: 3cd7c0ddc901bc24b9e5a68dbabf9380
+    spriteID: 9abcec7176846ec4bafd7cb5377f9c58
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 4}
+  - name: Run_Frame_1
+    originalName: 
+    pivot: {x: 0.4615385, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 13
+      height: 32
+    spriteID: 643e9698b3d15014d9f66ec179685d76
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,58 +159,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Girl_Frame_1
+  - name: Run_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.4615385, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 24
+      x: 25
       y: 4
-      width: 12
-      height: 31
-    spriteID: 8a56dfb46ad3ec34fb54c970979eb2a8
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 24, y: 4}
-  - name: Girl_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 24
-      y: 43
-      width: 12
-      height: 31
-    spriteID: 03869bac984c17d4aa11508c62c80b71
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 24, y: 43}
-  - name: Girl_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 44
-      width: 12
+      width: 13
       height: 32
-    spriteID: b1e831d3909e8924fa8e5a8de20128aa
+    spriteID: e3cf47039a7d58e4b8390513aaff091d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -198,76 +178,40 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 44}
-  - name: Girl_Frame_4
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 84
-      width: 12
-      height: 32
-    spriteID: 9d87c8e6896fba0429665ef5eaf9923d
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 84}
+    uvTransform: {x: 25, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1029732048
-    name: Girl
+    guid: 1912097461
+    name: Run
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Girl_Frame_0
+    - name: Run_Frame_0
       frameIndex: 0
       cellRect:
         x: 10
         y: 0
         width: 12
         height: 32
-      spriteId: 3cd7c0ddc901bc24b9e5a68dbabf9380
-    - name: Girl_Frame_1
+      spriteId: 9abcec7176846ec4bafd7cb5377f9c58
+    - name: Run_Frame_1
       frameIndex: 1
       cellRect:
         x: 10
         y: 0
-        width: 12
-        height: 31
-      spriteId: 8a56dfb46ad3ec34fb54c970979eb2a8
-    - name: Girl_Frame_2
+        width: 13
+        height: 32
+      spriteId: 643e9698b3d15014d9f66ec179685d76
+    - name: Run_Frame_2
       frameIndex: 2
       cellRect:
         x: 10
         y: 0
-        width: 12
-        height: 31
-      spriteId: 03869bac984c17d4aa11508c62c80b71
-    - name: Girl_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 10
-        y: 0
-        width: 12
+        width: 13
         height: 32
-      spriteId: b1e831d3909e8924fa8e5a8de20128aa
-    - name: Girl_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 10
-        y: 0
-        width: 12
-        height: 32
-      spriteId: 9d87c8e6896fba0429665ef5eaf9923d
+      spriteId: e3cf47039a7d58e4b8390513aaff091d
     linkedCells: []
     parentIndex: -1
   platformSettings: []
