@@ -9,19 +9,16 @@ public class MainMenu : MonoBehaviour
 {
     private Animator transitionAnimator;
     [SerializeField] private float transitionTime = 1f;
+    private GameObject image;
 
     void Start()
     {
         //Recogemos el animator (SUPUESTAMENTE ESTO DA ERROR, DEBERIA ENCONTRAR EL COMPONENTE ANIMATOR DE FADEEFFECT!!!!!!!!!)
         transitionAnimator = GetComponentInChildren<Animator>();
-    }
-    
-    void Update() //METODO DE PRUEBA MIENTRAS SE ARREGLA LAS CAPAS (NO PERMITE DAR CLICK SI ESTA EN LA IMAGEN DE FADE ENCIMA)
-    {
-        if(Input.anyKeyDown)
-        {
-            PlayGame();
-        }
+
+        //Buscamos imagen y la desactivamos tras el fade de inicio en la corutina
+        image = GameObject.FindWithTag("Fade");
+        StartCoroutine(disableFadeEffect());
     }
 
     //Cambiar escena de pantalla de menu principal al juego
@@ -32,13 +29,20 @@ public class MainMenu : MonoBehaviour
         StartCoroutine (SceneLoad(nextSceneIndex));
     }
 
+    public IEnumerator disableFadeEffect()
+    {
+        yield return new WaitForSeconds(transitionTime);
+        image.SetActive(false);
+    }
+
     public IEnumerator SceneLoad(int sceneIndex) 
     {
+        image.SetActive(true);
         //Disparar trigger para reproducir la animación de FadeIn
         transitionAnimator.SetTrigger("StartTransition");
         //Esperamos un segundo y cargamos la escena con el valor pasado por parámetro
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(sceneIndex); 
+        SceneManager.LoadScene(sceneIndex);
     }
 
     //Cerrar el juego

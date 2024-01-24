@@ -1606,6 +1606,7 @@ RectTransform:
   - {fileID: 1223882039}
   - {fileID: 775445485}
   - {fileID: 603826296}
+  - {fileID: 879540744}
   m_Father: {fileID: 531384157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2341,19 +2342,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879540739}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1269208232}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 593234794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 50, y: 50.000046}
+  m_SizeDelta: {x: 800, y: 450.0773}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &936515772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3235,7 +3236,7 @@ GameObject:
   - component: {fileID: 1269208233}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4568,4 +4569,3 @@ SceneRoots:
   - {fileID: 134514163}
   - {fileID: 19357722}
   - {fileID: 531384157}
-  - {fileID: 879540744}
