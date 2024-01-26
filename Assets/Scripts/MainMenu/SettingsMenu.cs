@@ -12,13 +12,13 @@ public class SettingsMenu : MonoBehaviour
 
     //------------------------ SONIDO ------------------------
 
-    //Metodo para cambiar el volumen del mixer "audioMixer"
+    //Metodo para cambiar el volumen del mixer de volumen general "audioMixer"
     public void SetMainVolume(float volume) 
     {
         audioMixer.SetFloat("volume", volume);
     }
 
-    //Metodo para cambiar el volumen del mixer "effectsMixer"
+    //Metodo para cambiar el volumen del mixer de efectos "effectsMixer"
     public void SetEffectsVolume(float volume)
     {
         effectsMixer.SetFloat("volume", volume);
