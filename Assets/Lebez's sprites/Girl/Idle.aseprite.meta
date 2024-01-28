@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 43
       width: 12
       height: 32
-    spriteID: 37aea8573d03f2b45b12291bdb4f17ff
+    spriteID: ab7238e87186dc94283f6637485bccce
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 31
-    spriteID: 8f1600174ffc1bf4e8cb1a6a1047e411
+    spriteID: f1bd3bfa4e657a84481b33cc0d511c96
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 44
       width: 12
       height: 31
-    spriteID: 279eaa0013d0569479f8e113918f359a
+    spriteID: 2dd4f1f560a778041ae62fd2f8171f15
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 83
       width: 12
       height: 32
-    spriteID: 4f913eb336a164548859dd2e1794f1f7
+    spriteID: 57d60418c8cb3ff4ab16d99179584ef3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +210,7 @@ ScriptedImporter:
       y: 4
       width: 12
       height: 32
-    spriteID: e9c9ffa6f0d6e2b41b567516b4c74e71
+    spriteID: 9973b7a49cbbe9945baec241981764a2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -235,7 +235,7 @@ ScriptedImporter:
         y: 0
         width: 12
         height: 32
-      spriteId: 37aea8573d03f2b45b12291bdb4f17ff
+      spriteId: ab7238e87186dc94283f6637485bccce
     - name: Idle_Frame_1
       frameIndex: 1
       cellRect:
@@ -243,7 +243,7 @@ ScriptedImporter:
         y: 0
         width: 13
         height: 31
-      spriteId: 8f1600174ffc1bf4e8cb1a6a1047e411
+      spriteId: f1bd3bfa4e657a84481b33cc0d511c96
     - name: Idle_Frame_2
       frameIndex: 2
       cellRect:
@@ -251,7 +251,7 @@ ScriptedImporter:
         y: 0
         width: 12
         height: 31
-      spriteId: 279eaa0013d0569479f8e113918f359a
+      spriteId: 2dd4f1f560a778041ae62fd2f8171f15
     - name: Idle_Frame_3
       frameIndex: 3
       cellRect:
@@ -259,7 +259,7 @@ ScriptedImporter:
         y: 0
         width: 12
         height: 32
-      spriteId: 4f913eb336a164548859dd2e1794f1f7
+      spriteId: 57d60418c8cb3ff4ab16d99179584ef3
     - name: Idle_Frame_4
       frameIndex: 4
       cellRect:
@@ -267,7 +267,7 @@ ScriptedImporter:
         y: 0
         width: 12
         height: 32
-      spriteId: e9c9ffa6f0d6e2b41b567516b4c74e71
+      spriteId: 9973b7a49cbbe9945baec241981764a2
     linkedCells: []
     parentIndex: -1
   platformSettings: []

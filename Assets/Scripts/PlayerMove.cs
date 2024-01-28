@@ -35,8 +35,8 @@ public class PlayerMove : MonoBehaviour
     }
     void Update()
     {      
-        
-        if (Input.GetKeyDown("space")){
+        if (Input.GetKeyDown("space")) //Jump
+        {
             if (CheckGround.isGrounded)
             {
                 rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
@@ -77,6 +77,7 @@ public class PlayerMove : MonoBehaviour
             CheckWall.isWall=false;               
             canDouble=true;
             playerMovement=true;
+            horizCounter=0;
             if (stopMove)
             {
                 Invoke("Stoped",0.1f);
@@ -85,12 +86,19 @@ public class PlayerMove : MonoBehaviour
         if(CheckGround.isGrounded==false){
             animator.SetBool("Jump",true);
             animator.SetBool("Run",false);
+            if (Input.GetKeyDown(KeyCode.LeftShift)) //Air Dash
+            {
+                playerMovement=false;
+                horizCounter=horizStartTime;
+
+            }
         }
         if (CheckWall.isWall==false){
             animator.SetBool("Wall",false);
         }
-        if (CheckWall.isWall)
+        if (CheckWall.isWall) //Wall Jump
             {
+                horizCounter=0;
                 if(Input.GetKey("a")&&Input.GetKey("d")){}else{
                 canDouble=false;
                 animator.SetBool("Wall",true);
@@ -129,20 +137,24 @@ public class PlayerMove : MonoBehaviour
             if (wallCounter<=0)
             {
                 playerMovement=true;
+                
                                 
             }
         }
-        /*if (horizCounter>0)
-        {
+        if (horizCounter>0 && !CheckGround.isGrounded && !CheckWall.isWall)
+        { 
+            animator.SetBool("Fall",false);
+            animator.SetBool("Double",false);
+            animator.SetBool("Jump",false);
+            animator.SetBool("AirDash",true);
+            rb2D.velocity=new Vector2(2*direction,0.1f);
             horizCounter-=Time.deltaTime;
             if (horizCounter<=0)
-            {
-                playerMovement=true;
-                                
+            { 
+                playerMovement=true;                              
             }
         }
-        */
-        if (CheckGround.isGrounded)
+        if (CheckGround.isGrounded) //Horizontal Jump
         {
             if (Input.GetKey("s"))
             {
