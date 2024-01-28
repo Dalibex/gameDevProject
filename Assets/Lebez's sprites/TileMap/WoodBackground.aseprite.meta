@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd3e3c57d0380654e862c6ffad519d88
+guid: 27b51448e4d50ab4aaa2732cedfecf48
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,38 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Girl_Frame_0
+  - name: WoodBackground
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 43
-      width: 12
-      height: 32
-    spriteID: d40c8f4a43fcfc64c8175b930cc53848
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 43}
-  - name: Girl_Frame_1
-    originalName: 
-    pivot: {x: 0.4615385, y: 0}
+    pivot: {x: 0.53333336, y: -0.11111112}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 13
-      height: 31
-    spriteID: 86a61566d794940409523c6ed3bb6552
+      width: 240
+      height: 144
+    spriteID: d7666be4046d3314f832d7d242e746d9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -159,118 +139,26 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Girl_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 25
-      y: 44
-      width: 12
-      height: 31
-    spriteID: 706c9adee30edd74b9543e1803450d6a
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 25, y: 44}
-  - name: Girl_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 83
-      width: 12
-      height: 32
-    spriteID: a56a077c303e2644da43d3c6f6bf3b16
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 83}
-  - name: Girl_Frame_4
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 25
-      y: 4
-      width: 12
-      height: 32
-    spriteID: c295e83e74e62b34491e947220bb8c42
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 25, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1029732048
-    name: Girl
+    guid: -1323071719
+    name: WoodBackground
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Girl_Frame_0
+    - name: WoodBackground
       frameIndex: 0
       cellRect:
-        x: 10
-        y: 0
-        width: 12
-        height: 32
-      spriteId: d40c8f4a43fcfc64c8175b930cc53848
-    - name: Girl_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 10
-        y: 0
-        width: 13
-        height: 31
-      spriteId: 86a61566d794940409523c6ed3bb6552
-    - name: Girl_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 10
-        y: 0
-        width: 12
-        height: 31
-      spriteId: 706c9adee30edd74b9543e1803450d6a
-    - name: Girl_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 10
-        y: 0
-        width: 12
-        height: 32
-      spriteId: a56a077c303e2644da43d3c6f6bf3b16
-    - name: Girl_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 10
-        y: 0
-        width: 12
-        height: 32
-      spriteId: c295e83e74e62b34491e947220bb8c42
+        x: 0
+        y: 16
+        width: 240
+        height: 144
+      spriteId: d7666be4046d3314f832d7d242e746d9
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 256, y: 160}

@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 4
       width: 20
       height: 32
-    spriteID: 939fd7c8950f5814da38b8b9c00194ae
+    spriteID: c6ea377b5f2b3f44a97495faefc2737e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 4
       width: 20
       height: 31
-    spriteID: 73e09ba8c804a5a4baf6506cafce7695
+    spriteID: f6bd65ec22425494283f32a1cfa9b553
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 43
       width: 20
       height: 31
-    spriteID: 460bf64bd87cc2a48a7d50b90e85b881
+    spriteID: 7b309c5e4fc136343afcc1d25268213a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 44
       width: 20
       height: 32
-    spriteID: f677bd31b37c27d4ea307cdd6157a47a
+    spriteID: ca78edcbb10c1db449ca36e6237d6030
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +210,7 @@ ScriptedImporter:
       y: 84
       width: 20
       height: 32
-    spriteID: 7cf1685755d1b1e439472b1905c4d083
+    spriteID: 48e967bfc35f4df438883c7757265fe7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -235,7 +235,7 @@ ScriptedImporter:
         y: 0
         width: 20
         height: 32
-      spriteId: 939fd7c8950f5814da38b8b9c00194ae
+      spriteId: c6ea377b5f2b3f44a97495faefc2737e
     - name: Boy_Frame_1
       frameIndex: 1
       cellRect:
@@ -243,7 +243,7 @@ ScriptedImporter:
         y: 0
         width: 20
         height: 31
-      spriteId: 73e09ba8c804a5a4baf6506cafce7695
+      spriteId: f6bd65ec22425494283f32a1cfa9b553
     - name: Boy_Frame_2
       frameIndex: 2
       cellRect:
@@ -251,7 +251,7 @@ ScriptedImporter:
         y: 0
         width: 20
         height: 31
-      spriteId: 460bf64bd87cc2a48a7d50b90e85b881
+      spriteId: 7b309c5e4fc136343afcc1d25268213a
     - name: Boy_Frame_3
       frameIndex: 3
       cellRect:
@@ -259,7 +259,7 @@ ScriptedImporter:
         y: 0
         width: 20
         height: 32
-      spriteId: f677bd31b37c27d4ea307cdd6157a47a
+      spriteId: ca78edcbb10c1db449ca36e6237d6030
     - name: Boy_Frame_4
       frameIndex: 4
       cellRect:
@@ -267,7 +267,7 @@ ScriptedImporter:
         y: 0
         width: 20
         height: 32
-      spriteId: 7cf1685755d1b1e439472b1905c4d083
+      spriteId: 48e967bfc35f4df438883c7757265fe7
     linkedCells: []
     parentIndex: -1
   platformSettings: []
