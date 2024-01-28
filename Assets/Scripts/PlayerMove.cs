@@ -7,20 +7,16 @@ using System.Threading;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float runSpeed=1;
-    public float jumpSpeed=3;
+    public float runSpeed=1, jumpSpeed=3;
     public SpriteRenderer spriteRenderer;
     Rigidbody2D rb2D;
     public Animator animator;
     private bool canDouble;
     public GameObject wallCollider;
-    private bool playerMovement;
+    private static bool playerMovement;
     private float wallCounter,horizCounter;
-    public float wallStartTime=0.5f;
-    public float horizStartTime=0.5f;
-    private int direction;
-    //public PhysicsMaterial2D terrain;
-    private bool horizontalJump,stopMove;
+    public float wallStartTime=0.5f, horizStartTime=0.5f;
+    private int direction,airDashCount;
     public BoxCollider2D boxCollider2D;
     // Start is called before the first frame update
     void Start()
@@ -30,8 +26,6 @@ public class PlayerMove : MonoBehaviour
         wallCounter=wallStartTime;
         horizCounter=horizStartTime;
         direction=1;
-        stopMove=false;
-        //terrain.friction=0.0045f;
     }
     void Update()
     {      
@@ -78,19 +72,18 @@ public class PlayerMove : MonoBehaviour
             canDouble=true;
             playerMovement=true;
             horizCounter=0;
-            if (stopMove)
-            {
-                Invoke("Stoped",0.1f);
-            }
+            airDashCount=1;
         }
         if(CheckGround.isGrounded==false){
             animator.SetBool("Jump",true);
             animator.SetBool("Run",false);
-            if (Input.GetKeyDown(KeyCode.LeftShift)) //Air Dash
+            //Air Dash
+            if (airDashCount>0&&Input.GetKeyDown(KeyCode.LeftShift)) 
             {
                 playerMovement=false;
                 horizCounter=horizStartTime;
-
+                rb2D.velocity=new Vector2(rb2D.velocity.x,0.2f);
+                airDashCount--;
             }
         }
         if (CheckWall.isWall==false){
@@ -102,8 +95,6 @@ public class PlayerMove : MonoBehaviour
                 if(Input.GetKey("a")&&Input.GetKey("d")){}else{
                 canDouble=false;
                 animator.SetBool("Wall",true);
-                //rb2D.velocity = new Vector2(rb2D.velocity.x, -0.75f);
-
                 if(Input.GetKey("a"))
                 {
                     animator.Play("WallAnimation");
@@ -136,9 +127,7 @@ public class PlayerMove : MonoBehaviour
             wallCounter-=Time.deltaTime;
             if (wallCounter<=0)
             {
-                playerMovement=true;
-                
-                                
+                playerMovement=true;                   
             }
         }
         if (horizCounter>0 && !CheckGround.isGrounded && !CheckWall.isWall)
@@ -146,7 +135,7 @@ public class PlayerMove : MonoBehaviour
             animator.SetBool("Fall",false);
             animator.SetBool("Double",false);
             animator.SetBool("Jump",false);
-            animator.SetBool("AirDash",true);
+            //animator.SetBool("AirDash",true);
             rb2D.velocity=new Vector2(2*direction,0.1f);
             horizCounter-=Time.deltaTime;
             if (horizCounter<=0)
@@ -172,10 +161,9 @@ public class PlayerMove : MonoBehaviour
                 }
                 if(Input.GetKeyDown("space"))
                 {
-                    stopMove=true;
                     rb2D.velocity = new Vector2(2*runSpeed*direction, jumpSpeed/2);
                     CheckGround.isGrounded=false;
-                }//else rb2D.velocity = new Vector2(0, 0);
+                }
             }else playerMovement=true;
         }
             
@@ -208,11 +196,6 @@ public class PlayerMove : MonoBehaviour
                 }
         }
     }
-    void Stoped(){
-        rb2D.velocity = new Vector2(0, rb2D.velocity.y);
-        playerMovement=true; 
-        stopMove=false;
-    }
     public void  Bounce(){
         rb2D.velocity= new Vector2(0,2);
         boxCollider2D.isTrigger=true;
@@ -220,5 +203,8 @@ public class PlayerMove : MonoBehaviour
         CheckWall.isWall=false;
         spriteRenderer.sortingOrder=3;
         playerMovement=false;
+    }
+    public static void setPlayerMovement(bool Bool){
+        playerMovement=Bool;
     }
 }
