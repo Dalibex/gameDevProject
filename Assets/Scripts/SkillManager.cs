@@ -53,4 +53,7 @@ public class SkillManager : MonoBehaviour
     public void MouseExit(){
         isSelected=false;
     }
+    public bool getisActive(){
+        return isActive;
+    }
 }
