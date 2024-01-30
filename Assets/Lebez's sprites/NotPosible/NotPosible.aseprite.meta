@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 977bdca90bc6dd64a8b54f6a77f40c87
+guid: d34e60a5c609cb943b55bafe08fc7b5e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: GirlBoy
+  - name: NotPosible
     originalName: 
-    pivot: {x: 0.51724136, y: 0}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 58
+      width: 32
       height: 32
-    spriteID: 81b8e1f74b2739148b6d5502db2c7009
+    spriteID: 1f010d4f41c52114ebdd7f24343806e0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,23 +142,23 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -216198562
-    name: GirlBoy
+    guid: 1511885887
+    name: NotPosible
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GirlBoy
+    - name: NotPosible
       frameIndex: 0
       cellRect:
-        x: 2
+        x: 0
         y: 0
-        width: 58
+        width: 32
         height: 32
-      spriteId: 81b8e1f74b2739148b6d5502db2c7009
+      spriteId: 1f010d4f41c52114ebdd7f24343806e0
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 32, y: 32}
