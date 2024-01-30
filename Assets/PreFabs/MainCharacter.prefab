@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4360906136635743558}
   - component: {fileID: 4670599716676065638}
   - component: {fileID: 6664624092251501097}
+  - component: {fileID: 3321760212530365812}
   m_Layer: 0
   m_Name: MainCharacter
   m_TagString: Player
@@ -291,6 +292,9 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5968324348548574084}
   animator: {fileID: 4360906136635743558}
   wallCollider: {fileID: 6223782011660299271}
+  wallStartTime: 0.5
+  horizStartTime: 0.5
+  boxCollider2D: {fileID: 0}
 --- !u!114 &6664624092251501097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +308,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4360906136635743558}
+--- !u!114 &3321760212530365812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5887151506869524824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb61c7d45c5ab5b449a2c53cd80ba00e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bag: []
 --- !u!1 &6223782011660299271
 GameObject:
   m_ObjectHideFlags: 0
