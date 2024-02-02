@@ -354,7 +354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8368573108807167460, guid: 6508617ef57fba343a067e49b44464b0, type: 3}
       propertyPath: m_TagString
-      value: Item
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -378,7 +378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &416511467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4037,6 +4037,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &688871283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4889565271930495317, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+  m_PrefabInstance: {fileID: 645926994}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &710989394
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,6 +5306,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2777828038687890620, guid: 6508617ef57fba343a067e49b44464b0, type: 3}
   m_PrefabInstance: {fileID: 408960391}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1901106310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4889565271930495317, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+  m_PrefabInstance: {fileID: 83740357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1920751331
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,6 +5390,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920751331}
   m_CullTransparentMesh: 1
+--- !u!1 &1954933733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4889565271930495317, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+  m_PrefabInstance: {fileID: 1179214581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1997920539
 GameObject:
   m_ObjectHideFlags: 0
@@ -5396,7 +5411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1997920540
 Transform:
   m_ObjectHideFlags: 0
@@ -5428,9 +5443,9 @@ MonoBehaviour:
   SkillPanel: {fileID: 416511466}
   Skills:
   - {fileID: 54684450}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 688871283}
+  - {fileID: 1954933733}
+  - {fileID: 1901106310}
 --- !u!224 &2084136582 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8467441970907074146, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
@@ -5449,6 +5464,10 @@ PrefabInstance:
       value: 'AirDash
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890400681522102327, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4043152574139540967, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
       propertyPath: m_Sprite
@@ -5629,6 +5648,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4670599716676065638, guid: 43795322ebeac20429292db7ddf45099, type: 3}
+      propertyPath: skillPanel
+      value: 
+      objectReference: {fileID: 416511466}
+    - target: {fileID: 4670599716676065638, guid: 43795322ebeac20429292db7ddf45099, type: 3}
       propertyPath: boxCollider2D
       value: 
       objectReference: {fileID: 1409333462}
@@ -5776,7 +5799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8368573108807167460, guid: 6508617ef57fba343a067e49b44464b0, type: 3}
       propertyPath: m_TagString
-      value: Item
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
