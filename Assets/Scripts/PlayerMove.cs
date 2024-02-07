@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
+using Unity.VisualScripting;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class PlayerMove : MonoBehaviour
     public float wallStartTime=0.5f, horizStartTime=0.5f;
     private int direction,airDashCount;
     public BoxCollider2D boxCollider2D;
+    private bool AirActive,WallActive,HorActive,DoubActive;
+    public GameObject skillPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,8 @@ public class PlayerMove : MonoBehaviour
         direction=1;
     }
     void Update()
-    {      
+    {
+        StartCoroutine("getSkillsActive");      
         if (Input.GetKeyDown("space")) //Jump
         {
             if (CheckGround.isGrounded)
@@ -37,7 +41,7 @@ public class PlayerMove : MonoBehaviour
             }
             else if (Input.GetKeyDown("space"))
             {
-                if (canDouble)
+                if (canDouble&&DoubActive)
                 {
                     rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
                     animator.SetBool("Double",true);
@@ -50,7 +54,7 @@ public class PlayerMove : MonoBehaviour
                 animator.SetBool("Fall",true);
                 if (Input.GetKeyDown("space"))
             {
-                if (canDouble)
+                if (canDouble&&DoubActive)
                 {
                     rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
                     animator.SetBool("Double",true);
@@ -78,18 +82,24 @@ public class PlayerMove : MonoBehaviour
             animator.SetBool("Jump",true);
             animator.SetBool("Run",false);
             //Air Dash
-            if (airDashCount>0&&Input.GetKeyDown(KeyCode.LeftShift)) 
+            if (airDashCount>0&&Input.GetKeyDown(KeyCode.LeftShift)&&AirActive) 
             {
+                if (!CheckWall.isWall)
+                {
                 playerMovement=false;
                 horizCounter=horizStartTime;
                 rb2D.velocity=new Vector2(rb2D.velocity.x,0.2f);
                 airDashCount--;
+                }else
+                {
+                    horizCounter=0;
+                }
             }
         }
         if (CheckWall.isWall==false){
             animator.SetBool("Wall",false);
         }
-        if (CheckWall.isWall) //Wall Jump
+        if (CheckWall.isWall&&WallActive) //Wall Jump
             {
                 horizCounter=0;
                 if(Input.GetKey("a")&&Input.GetKey("d")){}else{
@@ -143,7 +153,7 @@ public class PlayerMove : MonoBehaviour
                 playerMovement=true;                              
             }
         }
-        if (CheckGround.isGrounded) //Horizontal Jump
+        if (CheckGround.isGrounded&&HorActive) //Horizontal Jump
         {
             if (Input.GetKey("s"))
             {
@@ -165,8 +175,7 @@ public class PlayerMove : MonoBehaviour
                     CheckGround.isGrounded=false;
                 }
             }else playerMovement=true;
-        }
-            
+        }   
     }
 
     // Update is called once per frame
@@ -206,5 +215,12 @@ public class PlayerMove : MonoBehaviour
     }
     public static void setPlayerMovement(bool Bool){
         playerMovement=Bool;
+    }
+    private IEnumerator getSkillsActive(){
+        AirActive=skillPanel.transform.GetChild(0).transform.GetChild(3).gameObject.activeSelf;
+        WallActive=skillPanel.transform.GetChild(1).transform.GetChild(3).gameObject.activeSelf;
+        HorActive=skillPanel.transform.GetChild(2).transform.GetChild(3).gameObject.activeSelf;
+        DoubActive=skillPanel.transform.GetChild(3).transform.GetChild(3).gameObject.activeSelf;
+        yield return new WaitForSeconds(0.2f);
     }
 }
