@@ -494,6 +494,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Double
       objectReference: {fileID: 0}
+    - target: {fileID: 5073073205418518709, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+      propertyPath: skill.id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073073205418518709, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+      propertyPath: skill.name
+      value: Double
+      objectReference: {fileID: 0}
     - target: {fileID: 8467441970907074146, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4656,12 +4664,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5073073205418518709, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+      propertyPath: skill.id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073073205418518709, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
       propertyPath: isBlocked
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5073073205418518709, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
       propertyPath: isSelected
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073073205418518709, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+      propertyPath: skill.name
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8467441970907074146, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
       propertyPath: m_Pivot.x
@@ -4781,7 +4797,7 @@ MonoBehaviour:
   saveFile: 
   dataGame:
     position: {x: 0, y: 0, z: 0}
-    skill: []
+    skills: []
   skillsActivated: []
 --- !u!4 &656826569
 Transform:
@@ -6235,6 +6251,14 @@ PrefabInstance:
       objectReference: {fileID: -322267492530565432, guid: f19340c42cec32547bd821913ea9b279, type: 3}
     - target: {fileID: 4889565271930495317, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
       propertyPath: m_Name
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073073205418518709, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+      propertyPath: skill.id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073073205418518709, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+      propertyPath: skill.name
       value: Horizontal
       objectReference: {fileID: 0}
     - target: {fileID: 8467441970907074146, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
@@ -9137,7 +9161,6 @@ MonoBehaviour:
   - {fileID: 688871283}
   - {fileID: 1954933733}
   - {fileID: 1901106310}
-  activatedSkills2: []
 --- !u!224 &2084136582 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8467441970907074146, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
@@ -9242,6 +9265,10 @@ PrefabInstance:
       objectReference: {fileID: 6661858418086607923, guid: 0fb059693086cd345a467dca231c3e04, type: 3}
     - target: {fileID: 4889565271930495317, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
       propertyPath: m_Name
+      value: AirDash
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073073205418518709, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
+      propertyPath: skill.name
       value: AirDash
       objectReference: {fileID: 0}
     - target: {fileID: 6840275688734550023, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}
