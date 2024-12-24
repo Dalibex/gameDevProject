@@ -6,4 +6,5 @@ using UnityEngine;
 public class DataGame
 {
     public Vector3 position;
+    public List<SkillObject> skills;
 }

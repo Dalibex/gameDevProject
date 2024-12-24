@@ -1039,7 +1039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &416511467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4781,6 +4781,8 @@ MonoBehaviour:
   saveFile: 
   dataGame:
     position: {x: 0, y: 0, z: 0}
+    skill: []
+  skillsActivated: []
 --- !u!4 &656826569
 Transform:
   m_ObjectHideFlags: 0
@@ -9100,7 +9102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1997920540
 Transform:
   m_ObjectHideFlags: 0
@@ -9135,6 +9137,7 @@ MonoBehaviour:
   - {fileID: 688871283}
   - {fileID: 1954933733}
   - {fileID: 1901106310}
+  activatedSkills2: []
 --- !u!224 &2084136582 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8467441970907074146, guid: 8b67b06cb97922b4d9fd5b9e678d774c, type: 3}

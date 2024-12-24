@@ -7,7 +7,7 @@ public class SkillManager : MonoBehaviour
 {
     [SerializeField] private bool isBlocked,isSelected,isActive;
     [SerializeField] private GameObject Block,Select,Active;
-    private int activeCount=0;
+    public SkillObject skill;
     
     // Start is called before the first frame update
     void Start()
@@ -46,19 +46,29 @@ public class SkillManager : MonoBehaviour
             if (!isActive&&!isBlocked&&(FindObjectOfType<SkillSystem>().getActiveCount()!=2))
             {
                 isActive=true;
+                skill.isActive=true;
             }else{
                 isActive=false;
+                skill.isActive=false;
             }
         }
     }
     public void MouseOver(){
         isSelected=true;
-        Debug.Log("Mouse On");
     }
     public void MouseExit(){
         isSelected=false;
     }
     public bool getisActive(){
         return isActive;
+    }
+    public SkillObject getSkill(){
+        return skill;
+    }
+    public void setIsBlocked(bool value){
+        isBlocked=value;
+    }
+    public void setIsActive(bool value){
+        isActive=value;
     }
 }
