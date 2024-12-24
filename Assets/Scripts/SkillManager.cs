@@ -7,7 +7,7 @@ public class SkillManager : MonoBehaviour
 {
     [SerializeField] private bool isBlocked,isSelected,isActive;
     [SerializeField] private GameObject Block,Select,Active;
-    private int activeCount=0;
+    private int activeCount = 0;
     
     // Start is called before the first frame update
     void Start()
