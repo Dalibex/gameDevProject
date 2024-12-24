@@ -8,12 +8,6 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private bool isBlocked,isSelected,isActive;
     [SerializeField] private GameObject Block,Select,Active;
     public SkillObject skill;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -30,15 +24,11 @@ public class SkillManager : MonoBehaviour
         }else{
             Select.SetActive(false);
         }
-        if (!isBlocked&&isActive&&(FindObjectOfType<SkillSystem>().getActiveCount()<=2))
+        if (!isBlocked&&isActive)
         {
             Active.SetActive(true);
         }else{
             Active.SetActive(false);
-            if ((FindObjectOfType<SkillSystem>().getActiveCount()>2))
-            {
-                Active.SetActive(false);
-            }
         }
     }
     public void clickin(){
@@ -58,9 +48,6 @@ public class SkillManager : MonoBehaviour
     }
     public void MouseExit(){
         isSelected=false;
-    }
-    public bool getisActive(){
-        return isActive;
     }
     public SkillObject getSkill(){
         return skill;

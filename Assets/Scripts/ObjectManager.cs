@@ -8,8 +8,7 @@ public class ObjectManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll){
         if (coll.CompareTag("Item"))
         {
-            FindObjectOfType<Inventory>().setInv(coll);
-            
+            FindObjectOfType<Inventory>().setInv(coll);            
         }
     }
 }
