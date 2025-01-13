@@ -10,6 +10,8 @@ public class RebindKeyUI : MonoBehaviour
 
     public void Start()
     {
+        actionName = gameObject.name;
+        keyText = GetComponentInChildren<TextMeshProUGUI>();
         UpdateKeyText();
     }
 

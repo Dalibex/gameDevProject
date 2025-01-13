@@ -23,7 +23,7 @@ public class InputManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        filePath = Path.Combine(Application.persistentDataPath, "controls.json");
+        filePath = Path.Combine(Application.persistentDataPath, "controls.json");        
     }
 
     public void Start() {
@@ -51,11 +51,11 @@ public class InputManager : MonoBehaviour
         else
         {
             Debug.LogWarning("No controls file found. Using default controls.");
-            controls.Add(new ControlMapping { actionName = "MoveLeft", key = "A" });
-            controls.Add(new ControlMapping { actionName = "MoveRight", key = "D" });
-            controls.Add(new ControlMapping { actionName = "GoDown", key = "S" });
-            controls.Add(new ControlMapping { actionName = "Jump", key = "Space" });
-            controls.Add(new ControlMapping { actionName = "SkillPanel", key = "F" });
+            controls.Add(new ControlMapping { actionName = "MoveLeftButton", key = "A" });
+            controls.Add(new ControlMapping { actionName = "MoveRightButton", key = "D" });
+            controls.Add(new ControlMapping { actionName = "GoDownButton", key = "S" });
+            controls.Add(new ControlMapping { actionName = "JumpButton", key = "Space" });
+            controls.Add(new ControlMapping { actionName = "SkillPanelButton", key = "F" });
 
             SaveControlsToJSON();
         }
