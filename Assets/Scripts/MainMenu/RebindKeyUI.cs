@@ -10,7 +10,7 @@ public class RebindKeyUI : MonoBehaviour
 
     public void Start()
     {
-
+        UpdateKeyText();
     }
 
     private void Update()
@@ -36,10 +36,10 @@ public class RebindKeyUI : MonoBehaviour
         }
     }
 
-    public void UpdateKeyText(string actionN)
+    public void UpdateKeyText()
     {
-        //KeyCode key = InputManager.Instance.GetKey(actionN);
-        keyText.text = actionN;
+        KeyCode key = InputManager.Instance.GetKey(actionName);
+        keyText.text = key.ToString();
     }
 
     public void StartRebinding()
