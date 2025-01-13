@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6d220c801ab6ae740838780601713184
+guid: 996c7a38cd053f643808ec8dc22fee00
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,7 +119,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Idle_Frame_0
+  - name: Girl-Recovered_Frame_0
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -127,10 +127,30 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 43
       width: 12
       height: 32
-    spriteID: ab7238e87186dc94283f6637485bccce
+    spriteID: d5643ab2d4ebcbd409dfaec2167aff15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 43}
+  - name: Girl-Recovered_Frame_1
+    originalName: 
+    pivot: {x: 0.4615385, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 13
+      height: 31
+    spriteID: 04b40ec58953cac46b2b374e44119a81
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,58 +159,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Idle_Frame_1
+  - name: Girl-Recovered_Frame_2
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 24
-      y: 4
-      width: 12
-      height: 31
-    spriteID: f1bd3bfa4e657a84481b33cc0d511c96
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 24, y: 4}
-  - name: Idle_Frame_2
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 24
-      y: 43
-      width: 12
-      height: 31
-    spriteID: 2dd4f1f560a778041ae62fd2f8171f15
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 24, y: 43}
-  - name: Idle_Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
+      x: 25
       y: 44
       width: 12
-      height: 32
-    spriteID: 57d60418c8cb3ff4ab16d99179584ef3
+      height: 31
+    spriteID: 05a648872d09a744fbdb39f78e4e439e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -198,8 +178,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 44}
-  - name: Idle_Frame_4
+    uvTransform: {x: 25, y: 44}
+  - name: Girl-Recovered_Frame_3
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -207,10 +187,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 84
+      y: 83
       width: 12
       height: 32
-    spriteID: 9973b7a49cbbe9945baec241981764a2
+    spriteID: 4ab45688b00433c439c1a8be456364af
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -218,56 +198,76 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 84}
+    uvTransform: {x: 4, y: 83}
+  - name: Girl-Recovered_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 4
+      width: 12
+      height: 32
+    spriteID: 7999575ada4342b468df6601171d1126
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 161112836
-    name: Idle
+    guid: -1118041284
+    name: Girl-Recovered
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Idle_Frame_0
+    - name: Girl-Recovered_Frame_0
       frameIndex: 0
       cellRect:
         x: 10
         y: 0
         width: 12
         height: 32
-      spriteId: ab7238e87186dc94283f6637485bccce
-    - name: Idle_Frame_1
+      spriteId: d5643ab2d4ebcbd409dfaec2167aff15
+    - name: Girl-Recovered_Frame_1
       frameIndex: 1
       cellRect:
         x: 10
         y: 0
-        width: 12
+        width: 13
         height: 31
-      spriteId: f1bd3bfa4e657a84481b33cc0d511c96
-    - name: Idle_Frame_2
+      spriteId: 04b40ec58953cac46b2b374e44119a81
+    - name: Girl-Recovered_Frame_2
       frameIndex: 2
       cellRect:
         x: 10
         y: 0
         width: 12
         height: 31
-      spriteId: 2dd4f1f560a778041ae62fd2f8171f15
-    - name: Idle_Frame_3
+      spriteId: 05a648872d09a744fbdb39f78e4e439e
+    - name: Girl-Recovered_Frame_3
       frameIndex: 3
       cellRect:
         x: 10
         y: 0
         width: 12
         height: 32
-      spriteId: 57d60418c8cb3ff4ab16d99179584ef3
-    - name: Idle_Frame_4
+      spriteId: 4ab45688b00433c439c1a8be456364af
+    - name: Girl-Recovered_Frame_4
       frameIndex: 4
       cellRect:
         x: 10
         y: 0
         width: 12
         height: 32
-      spriteId: 9973b7a49cbbe9945baec241981764a2
+      spriteId: 7999575ada4342b468df6601171d1126
     linkedCells: []
     parentIndex: -1
   platformSettings: []
