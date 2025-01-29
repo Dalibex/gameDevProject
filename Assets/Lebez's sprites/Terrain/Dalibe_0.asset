@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PlainsTerrain_2
+  m_Name: Dalibe_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 728371959, guid: cca343a7dfc21a64ea38a5050df8ed4b, type: 3}
+  m_Sprite: {fileID: -1012646305, guid: b062ce7fdce9b0243adf9076609dc423, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
