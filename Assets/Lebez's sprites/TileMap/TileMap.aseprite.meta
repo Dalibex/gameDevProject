@@ -121,16 +121,36 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: TileMap
     originalName: 
-    pivot: {x: 2.818182, y: -11.05}
+    pivot: {x: 1.409091, y: -11.05}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 108
+      width: 352
+      height: 80
+    spriteID: 7ff4f76ac6384f148b590bcc26ea36ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 108}
+  - name: TileMap_Frame_1
+    originalName: 
+    pivot: {x: 1.5500001, y: -9.041666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 176
-      height: 80
-    spriteID: 7ff4f76ac6384f148b590bcc26ea36ca
+      width: 320
+      height: 96
+    spriteID: af25eeebd8740624b8aaab3ccb33dadc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,14 +168,22 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: TileMap
+    - name: TileMap_Frame_0
       frameIndex: 0
       cellRect:
         x: 16
         y: 884
-        width: 176
+        width: 352
         height: 80
       spriteId: 7ff4f76ac6384f148b590bcc26ea36ca
+    - name: TileMap_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 16
+        y: 868
+        width: 320
+        height: 96
+      spriteId: af25eeebd8740624b8aaab3ccb33dadc
     linkedCells: []
     parentIndex: -1
   platformSettings: []
