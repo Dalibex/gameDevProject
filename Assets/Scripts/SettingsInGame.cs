@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class SettingsInGame : MonoBehaviour
 {
-    private bool aj;
+    private bool Panel;
     public GameObject options;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) {
-            aj =! aj;
-            Time.timeScale = aj ? 0 : 1;
+        if(Input.GetKeyDown(KeyCode.Escape)&& !FindFirstObjectByType<SkillSystem>().ActivatePanel) {
+            Panel =! Panel;
+            Time.timeScale = Panel ? 0 : 1;
         }
-        options.SetActive(aj);
+        options.SetActive(Panel);
     }
 
     public void close() {
-        aj = false;
+        Panel = false;
         Time.timeScale = 1;
     }
     public void returnMainMenu() {

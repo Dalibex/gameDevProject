@@ -1,0 +1,24 @@
+{
+    "controls": [
+        {
+            "actionName": "MoveLeftButton",
+            "key": "A"
+        },
+        {
+            "actionName": "MoveRightButton",
+            "key": "D"
+        },
+        {
+            "actionName": "GoDownButton",
+            "key": "S"
+        },
+        {
+            "actionName": "JumpButton",
+            "key": "Space"
+        },
+        {
+            "actionName": "SkillPanelButton",
+            "key": "F"
+        }
+    ]
+}

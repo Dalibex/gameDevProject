@@ -16,10 +16,10 @@ public class Platform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp("s")){
+        if(Input.GetKeyUp(InputManager.Instance.GetKey("GoDownButton"))){
             waitedTime=starWaitTime;
         }
-        if (Input.GetKey("s"))
+        if (Input.GetKey(InputManager.Instance.GetKey("GoDownButton")))
         {
             if (waitedTime<=0)
             {
@@ -30,7 +30,7 @@ public class Platform : MonoBehaviour
         else {
             waitedTime -=Time.deltaTime;
         }
-        if (Input.GetKey("space")){
+        if (Input.GetKey(InputManager.Instance.GetKey("JumpButton"))){
             effector.rotationalOffset=0;
         }
     }

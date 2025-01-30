@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 /* Para las escenas usamos la libreria de SceneManagement que viene con
 "SceneManager." */
-public class MainMenu : MonoBehaviour
+public class MainMen : MonoBehaviour
 {
     private Animator transitionAnimator;
     [SerializeField] private float transitionTime = 1f;

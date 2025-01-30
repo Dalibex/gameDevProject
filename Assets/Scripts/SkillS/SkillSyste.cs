@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SkillSystem : MonoBehaviour
 {
-    private bool ActivatePanel;
+    public bool ActivatePanel;
     public GameObject SkillPanel;
     public  List<GameObject> Skills=new List<GameObject>();
     private int activeCount;
@@ -17,11 +17,14 @@ public class SkillSystem : MonoBehaviour
         {
             SkillPanel.SetActive(true);
             PlayerMove.setPlayerMovement(false);
-        }else
-        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                ActivatePanel=false;
+            }
+        }else{
             SkillPanel.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(InputManager.Instance.GetKey("SkillPanelButton")))
         {
             ActivatePanel=!ActivatePanel;
         }

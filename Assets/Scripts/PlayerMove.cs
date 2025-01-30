@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
 using Unity.VisualScripting;
+using System.IO;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class PlayerMove : MonoBehaviour
     public BoxCollider2D boxCollider2D;
     private bool AirActive,WallActive,HorActive,DoubActive;
     public GameObject skillPanel;
+    public List<ControlMapping> Controls;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,17 +31,18 @@ public class PlayerMove : MonoBehaviour
         wallCounter=wallStartTime;
         horizCounter=horizStartTime;
         direction=1;
+        //LoadControls();
     }
     void Update()
     {
         StartCoroutine("getSkillsActive");      
-        if (Input.GetKeyDown("space")) //Jump
+        if (Input.GetKeyDown(InputManager.Instance.GetKey("JumpButton"))) //Jump
         {
             if (CheckGround.isGrounded)
             {
                 rb2D.velocity = new Vector2(rb2D.velocity.x, jumpSpeed);
             }
-            else if (Input.GetKeyDown("space"))
+            else if (Input.GetKeyDown(InputManager.Instance.GetKey("JumpButton")))
             {
                 if (canDouble&&DoubActive)
                 {
@@ -52,7 +55,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (rb2D.velocity.y<0){
                 animator.SetBool("Fall",true);
-                if (Input.GetKeyDown("space"))
+                if (Input.GetKeyDown(InputManager.Instance.GetKey("JumpButton")))
             {
                 if (canDouble&&DoubActive)
                 {
@@ -102,13 +105,13 @@ public class PlayerMove : MonoBehaviour
         if (CheckWall.isWall&&WallActive) //Wall Jump
             {
                 horizCounter=0;
-                if(Input.GetKey("a")&&Input.GetKey("d")){}else{
+                if(Input.GetKey(InputManager.Instance.GetKey("MoveLeftButton"))&&Input.GetKey(InputManager.Instance.GetKey("MoveRightButton"))){}else{
                 canDouble=false;
                 animator.SetBool("Wall",true);
-                if(Input.GetKey("a"))
+                if(Input.GetKey(InputManager.Instance.GetKey("MoveLeftButton")))
                 {
                     animator.Play("WallAnimation");
-                    if (Input.GetKeyDown("space"))
+                    if (Input.GetKeyDown(InputManager.Instance.GetKey("JumpButton")))
                     {
                         animator.SetBool("Double",false);
                         wallCounter=wallStartTime;
@@ -117,10 +120,10 @@ public class PlayerMove : MonoBehaviour
                     }
                 }
             
-                if(Input.GetKey("d"))
+                if(Input.GetKey(InputManager.Instance.GetKey("MoveRightButton")))
                 {
                     animator.Play("WallAnimation");
-                    if (Input.GetKeyDown("space"))
+                    if (Input.GetKeyDown(InputManager.Instance.GetKey("JumpButton")))
                     {
                         animator.SetBool("Double",false);
                         wallCounter=wallStartTime;       
@@ -155,21 +158,21 @@ public class PlayerMove : MonoBehaviour
         }
         if (CheckGround.isGrounded&&HorActive) //Horizontal Jump
         {
-            if (Input.GetKey("s"))
+            if (Input.GetKey(InputManager.Instance.GetKey("GoDownButton")))//platform ojo
             {
                 rb2D.velocity = new Vector2(0, rb2D.velocity.y);
                 playerMovement=false; 
                 animator.SetBool("Run",false);
-                if (Input.GetKey("a"))
+                if (Input.GetKey(InputManager.Instance.GetKey("MoveLeftButton")))
                 {
                     direction=-1;
                     spriteRenderer.flipX=true;
-                }else if (Input.GetKey("d"))
+                }else if (Input.GetKey(InputManager.Instance.GetKey("MoveRightButton")))
                 {
                     direction=1;
                     spriteRenderer.flipX=false;
                 }
-                if(Input.GetKeyDown("space"))
+                if(Input.GetKeyDown(InputManager.Instance.GetKey("JumpButton")))
                 {
                     rb2D.velocity = new Vector2(2*runSpeed*direction, jumpSpeed/2);
                     CheckGround.isGrounded=false;
@@ -183,7 +186,7 @@ public class PlayerMove : MonoBehaviour
     {
         if(playerMovement)
         {
-            if (Input.GetKey("d"))
+            if (Input.GetKey(InputManager.Instance.GetKey("MoveRightButton")))
             {
                 direction=1;
                 rb2D.velocity = new Vector2(runSpeed,rb2D.velocity.y);
@@ -191,7 +194,7 @@ public class PlayerMove : MonoBehaviour
                 animator.SetBool("Run",true);
                 wallCollider.transform.position=(new Vector2(transform.position.x,wallCollider.transform.position.y));
             }
-            else if (Input.GetKey("a"))
+            else if (Input.GetKey(InputManager.Instance.GetKey("MoveLeftButton")))
             {
                 direction=-1;
                 rb2D.velocity = new Vector2(-runSpeed, rb2D.velocity.y);

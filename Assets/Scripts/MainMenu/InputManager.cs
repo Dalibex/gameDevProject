@@ -8,7 +8,7 @@ using System;
 public class InputManager : MonoBehaviour
 {
     public static InputManager Instance;
-    public List<ControlMapping> controls = new List<ControlMapping>();
+    public List<ControlMapping> Controls = new List<ControlMapping>();
     private string filePath;
 
     private void Awake()
@@ -23,7 +23,8 @@ public class InputManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        filePath = Path.Combine(Application.persistentDataPath, "controls.json");        
+        //filePath = Path.Combine(Application.persistentDataPath, "controls.json");    
+        filePath = "Assets/data/controls.json";    
     }
 
     public void Start() {
@@ -32,7 +33,7 @@ public class InputManager : MonoBehaviour
 
     public void SaveControlsToJSON()
     {
-        ControlSettings settings = new ControlSettings { controls = controls };
+        ControlSettings settings = new ControlSettings { controls = Controls };
         string json = JsonUtility.ToJson(settings, true);
         File.WriteAllText(filePath, json);
         Debug.Log("Controls saved to: " + filePath);
@@ -44,18 +45,18 @@ public class InputManager : MonoBehaviour
         {
             string json = File.ReadAllText(filePath);
             ControlSettings settings = JsonUtility.FromJson<ControlSettings>(json);
-            controls = settings.controls;
+            Controls = settings.controls;
 
             Debug.Log("Controls loaded from: " + filePath);
         }
         else
         {
             Debug.LogWarning("No controls file found. Using default controls.");
-            controls.Add(new ControlMapping { actionName = "MoveLeftButton", key = "A" });
-            controls.Add(new ControlMapping { actionName = "MoveRightButton", key = "D" });
-            controls.Add(new ControlMapping { actionName = "GoDownButton", key = "S" });
-            controls.Add(new ControlMapping { actionName = "JumpButton", key = "Space" });
-            controls.Add(new ControlMapping { actionName = "SkillPanelButton", key = "F" });
+            Controls.Add(new ControlMapping { actionName = "MoveLeftButton", key = "A" });
+            Controls.Add(new ControlMapping { actionName = "MoveRightButton", key = "D" });
+            Controls.Add(new ControlMapping { actionName = "GoDownButton", key = "S" });
+            Controls.Add(new ControlMapping { actionName = "JumpButton", key = "Space" });
+            Controls.Add(new ControlMapping { actionName = "SkillPanelButton", key = "F" });
 
             SaveControlsToJSON();
         }
@@ -63,11 +64,11 @@ public class InputManager : MonoBehaviour
 
     public KeyCode GetKey(string actionName)
     {
-        foreach (var control in controls)
+        foreach (var control in Controls)
         {
             if (control.actionName == actionName)
             {
-                Debug.Log($"Trying to convert '{control.key}' to KeyCode for action '{actionName}'");
+                //Debug.Log($"Trying to convert '{control.key}' to KeyCode for action '{actionName}'");
 
                 KeyCode keyCode;
                 if (System.Enum.TryParse(control.key, out keyCode))
@@ -86,7 +87,7 @@ public class InputManager : MonoBehaviour
 
     public void SetKey(string actionName, KeyCode newKey)
     {
-        foreach (var control in controls)
+        foreach (var control in Controls)
         {
             if (control.actionName == actionName)
             {
